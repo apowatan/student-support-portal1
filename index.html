@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة الطالب | دليل حل مشاكل القبول والتسجيل</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="csss.css">
+</head>
+<body>
+
+  
+    <div class="bg-slate-900 text-slate-200 text-xs sm:text-sm py-2.5 px-4 border-b border-white/10">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <span class="flex items-center gap-2 font-medium">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                حالة البوابة الأكاديمية: تعمل بشكل طبيعي
+            </span>
+            <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs font-semibold">
+                فترة السحب والإضافة تنتهي يوم الخميس المقبل
+            </span>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between relative">
+            <a href="#home" class="text-2xl font-extrabold tracking-tight text-slate-900 no-underline">
+                دليل<span class="text-cyan-600">الطالب</span>
+            </a>
+            
+            <nav id="navLinks" class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+                <a href="#home" class="hover:text-cyan-600 transition-colors no-underline">الرئيسية</a>
+                <a href="#issues" class="hover:text-cyan-600 transition-colors no-underline">أشهر المشاكل</a>
+                <a href="#generator" class="hover:text-cyan-600 transition-colors no-underline">توجيه الطلب للمسؤول</a>
+                <a href="#contact" class="hover:text-cyan-600 transition-colors no-underline">تواصل معنا</a>
+            </nav>
+            
+            <button id="menuBtn" class="md:hidden text-slate-700 text-xl p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="فتح القائمة">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge">◆ الدعم الطلابي الموحد ◆</span>
+            <h1>عندك مشكلة في التسجيل؟</h1>
+            <p>لا تقلق، جمعنا لك كافة المشاكل المتكررة في القبول والتسجيل والشؤون الأكاديمية مع الحلول المعتمدة خطوة بخطوة.</p>
+            
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="issueSearch" placeholder="ابحث عن مشكلتك (مثال: شُعبة مغلقة، إضافة مساق، سحب فصل)...">
+            </div>
+
+            <div class="quick-stats">
+                <div class="q-stat"><strong>+50</strong><span>مشكلة محلولة</span></div>
+                <div class="q-stat"><strong>24/7</strong><span>دليل متاح دائماً</span></div>
+                <div class="q-stat"><strong>3</strong><span>مجموعات دعم</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="issues section" id="issues">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">جميع المشاكل</button>
+            <button class="filter-btn" data-filter="registration">التسجيل والشُعب</button>
+            <button class="filter-btn" data-filter="finance">الرسوم والمنح</button>
+            <button class="filter-btn" data-filter="academic">الشؤون الأكاديمية</button>
+            <button class="filter-btn" data-filter="portal">البوابة والحساب</button>
+        </div>
+
+        <div class="issues-container">
+            <!-- مشكلة 1 -->
+            <div class="issue-card registration" 
+                 data-title="مشكلة: الشُعبة مغلقة بالكامل (Full Section)" 
+                 data-category="التسجيل والشُعب"
+                 data-solution="إذا كانت الشعبة مغلقة ولا يوجد بديل، يلزمك التواصل مع رئيس القسم د. أشرف أو تقديم طلب رسمي لفتح شعبة إضافية وزيادة السعة عبر منسق الجدول الأكاديمي.">
+                <div class="issue-icon"><i class="fa-solid fa-door-closed"></i></div>
+                <span class="issue-tag">التسجيل والشُعب</span>
+                <h3>الشُعبة مغلقة بالكامل</h3>
+                <p>تظهر عندما يصل عدد الطلاب المسجلين إلى الحد الأقصى الاستيعابي للقاعة في النظام.</p>
+                <button class="view-solution-btn">عرض الحل <i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+
+            <!-- مشكلة 2 -->
+            <div class="issue-card finance" 
+                 data-title="مشكلة: تأخر تفعيل التسجيل بعد تسديد الرسوم" 
+                 data-category="الرسوم والمنح"
+                 data-solution="في حال الدفع البنكي، يستغرق ترحيل الدفعة من 30 إلى 60 دقيقة. تأكد من الرقم الجامعي، وفي حال استمرار المشكلة تواصل مع المدير المالي أ. محمود عويضة لإجراء التدقيق والتفعيل الفوري.">
+                <div class="issue-icon"><i class="fa-solid fa-receipt"></i></div>
+                <span class="issue-tag">الرسوم والمنح</span>
+                <h3>دفعت الرسوم ولم يفتح حسابي</h3>
+                <p>ظهور رسالة تفيد بضرورة دفع الحد الأدنى للتسجيل رغم إتمام الحوالة البنكية بنجاح.</p>
+                <button class="view-solution-btn">عرض الحل <i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+
+            <!-- مشكلة 3 -->
+            <div class="issue-card academic" 
+                 data-title="مشكلة: المتطلب السابق للمساق غير مستوفى" 
+                 data-category="الشؤون الأكاديمية"
+                 data-solution="لا يمكنك تنزيل مساق متقدم دون اجتياز متطلبه السابق، ويُستثنى من ذلك الطلبة المتوقع تخرجهم بموافقة الشؤون الأكاديمية ومراجعة د. جهاد الزطمة لتنزيل المساق تزامناً أو استثنائياً.">
+                <div class="issue-icon"><i class="fa-solid fa-link-slash"></i></div>
+                <span class="issue-tag">الشؤون الأكاديمية</span>
+                <h3>المتطلب السابق غير مستوفى</h3>
+                <p>رفض النظام إضافة مادة مشترطة بنجاح مساق استباقي لم تجتزه بعد في الفصول السابقة.</p>
+                <button class="view-solution-btn">عرض الحل <i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+
+            <!-- مشكلة 4 -->
+            <div class="issue-card portal" 
+                 data-title="مشكلة: فقدان كلمة مرور البوابة الأكاديمية" 
+                 data-category="البوابة والحساب"
+                 data-solution="استخدم خيار استعادة كلمة المرور عبر البريد الجامعي أو الهاتف، وإذا تعذر ذلك راجع الدعم الفني ومركز الحاسوب وتكنولوجيا المعلومات مصطحباً بطاقتك الجامعية لإعادة الضبط فوراً.">
+                <div class="issue-icon"><i class="fa-solid fa-key"></i></div>
+                <span class="issue-tag">البوابة والحساب</span>
+                <h3>فقدان كلمة مرور البوابة</h3>
+                <p>عدم التمكن من تسجيل الدخول لحساب الطالب الأكاديمي لتنزيل الجدول أو متابعة الدرجات.</p>
+                <button class="view-solution-btn">عرض الحل <i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="generator-section" id="generator">
+        <div class="generator-container">
+            <div class="section-header">
+                <span class="badge">أداة المراسلة المباشرة</span>
+                <h2>توليد رسالة وتوجيه الطلب للمسؤول المختص</h2>
+                <p>أدخل بياناتك واختر المشكلة، وسيتم توليد وتجهيز الرسالة مباشرة لك في نافذة علوية.</p>
+            </div>
+
+            <div class="single-gen-card">
+                <h3><i class="fa-solid fa-pen-to-square"></i> بيانات الطالب والمشكلة الأكاديمية</h3>
+                
+                <div class="form-group">
+                    <label>اسم الطالب (ثلاثي):</label>
+                    <input type="text" id="genStudentName" placeholder="مثال: عمرو محمد ابو جامع">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>الرقم الجامعي:</label>
+                        <input type="text" id="genStudentId" placeholder="مثال: 1320230293">
+                    </div>
+                    <div class="form-group">
+                        <label>التخصص الدراسي:</label>
+                        <input type="text" id="genMajor" placeholder="مثال: نظم معلومات">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>المشكلة التي تواجهها:</label>
+                    <select id="genIssueType">
+                        <option value="closed_section">الشُعبة مغلقة بالكامل (Full Section)</option>
+                        <option value="tuition_fees">دفعت الرسوم ولم يفتح حسابي / تفعيل التسجيل</option>
+                        <option value="prerequisite">المتطلب السابق للمساق غير مستوفى</option>
+                        <option value="portal_login">فقدان كلمة مرور البوابة الأكاديمية</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="courseInputContainer">
+                    <label>المساق ورقم الشعبة (إن وجد):</label>
+                    <input type="text" id="genCourseDetails" placeholder="مثال: برمجة ويب (1) - شعبة 102">
+                </div>
+
+                <button id="btnGenerateEmail" class="btn-primary" style="margin-top: 10px;">
+                    <i class="fa-solid fa-paper-plane"></i> توليد وعرض الرسالة
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="letter-modal-overlay" id="letterModalOverlay">
+        <div class="letter-modal-card">
+            <button class="close-letter-modal" id="closeLetterModalBtn" title="إغلاق النافذة">&times;</button>
+            
+            <div class="letter-modal-header">
+                <span class="badge" style="background:#e3f4f9; color:#0d6f8e;"><i class="fa-solid fa-check-circle"></i> تم تجهيز الرسالة بنجاح</span>
+                <h3 style="margin-top: 8px; font-size: 19px;">الرسالة الموجهة للمسؤول</h3>
+            </div>
+
+            <div id="contactTargetBox" class="contact-target-box">
+                <i class="fa-solid fa-user-tie"></i> <strong>جهة المتابعة: </strong> <span id="targetOfficialName">د. أشرف (رئيس القسم)</span> | 
+                <i class="fa-solid fa-phone"></i> <strong>رقم التواصل: </strong> <a id="targetOfficialPhoneLink" href="tel:0599602989">0599602989</a>
+            </div>
+
+            <div class="subject-box">
+                <strong>موضوع الرسالة: </strong> <span id="genEmailSubject">طلب تسجيل مساق - شُعبة مغلقة</span>
+            </div>
+
+            <textarea id="genEmailBody" readonly rows="8" class="generated-textarea"></textarea>
+
+            <div class="action-buttons">
+                <button id="btnCopyGenEmail" class="btn-dark">
+                    <i class="fa-solid fa-copy"></i> <span>نسخ نص الرسالة للواتساب</span>
+                </button>
+                <a id="btnCallOfficial" href="tel:0599602989" class="btn-light">
+                    <i class="fa-solid fa-phone"></i> اتصال بالمسؤول
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="solutionModal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="إغلاق">&times;</button>
+            <span id="modalCategory" class="issue-tag"></span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalSolutionText"></p>
+            <button id="copySolutionBtn" class="btn-primary" style="margin-top: 15px;">
+                <i class="fa-solid fa-copy"></i> <span>نسخ الحل للقروب</span>
+            </button>
+        </div>
+
+
+
+    </div>    
+    
+
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    
+    <div class="col">
+      <div class="card text-bg-primary h-100 shadow-sm border-0">
+        <div class="card-header fw-bold">الشؤون الأكاديمية</div>
+        <div class="card-body">
+          <h5 class="card-title">تنزيل مساق استثنائي</h5>
+          <p class="card-text">طلب رفع سقف الساعات أو دراسة متطلب سابق تزامناً لطلبة الخريجين.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-secondary h-100 shadow-sm border-0">
+        <div class="card-header fw-bold">القبول والتسجيل</div>
+        <div class="card-body">
+          <h5 class="card-title">فتح شُعب مغلقة</h5>
+          <p class="card-text">معالجة تعارض المواعيد وفتح شُعب إضافية للمساقات الإجبارية.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-success h-100 shadow-sm border-0">
+        <div class="card-header fw-bold">الدائرة المالية</div>
+        <div class="card-body">
+          <h5 class="card-title">تفعيل الرسوم والدفعات</h5>
+          <p class="card-text">تدقيق الإيصالات البنكية وتفعيل البوابة لإتاحة تنزيل المساقات فوراً.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-danger h-100 shadow-sm border-0">
+        <div class="card-header fw-bold">إنذارات الحرمان</div>
+        <div class="card-body">
+          <h5 class="card-title">متابعة الغيابات</h5>
+          <p class="card-text">تقديم الأعذار الطبية المعتمدة لإلغاء تنبيهات الغياب الأكاديمي.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-warning h-100 shadow-sm border-0">
+        <div class="card-header fw-bold">مواعيد السحب والإضافة</div>
+        <div class="card-body">
+          <h5 class="card-title">الفترة الزمنية المتبقية</h5>
+          <p class="card-text">تنبيهات بأيام الإسقاط دون رسوب وتعديل الخطط الدراسية.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-warning h-100 shadow-sm border-0">
+        <div class="card-header fw-bold">الدعم الفني</div>
+        <div class="card-body">
+          <h5 class="card-title">استعادة البوابة</h5>
+          <p class="card-text">حل مشاكل كلمة المرور والبريد الأكاديمي الموحد للطلبة.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-light h-100 shadow-sm border">
+        <div class="card-header fw-bold">الإرشاد الأكاديمي</div>
+        <div class="card-body">
+          <h5 class="card-title">مراجعة الخطة</h5>
+          <p class="card-text">التواصل مع المرشد الأكاديمي للتأكد من تسلسل المواد الإجبارية.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card text-bg-dark h-100 shadow-sm border-0">
+        <div class="card-header fw-bold">عمادة شؤون الطلبة</div>
+        <div class="card-body">
+          <h5 class="card-title">المنح والقروض</h5>
+          <p class="card-text">تقديم طلبات البحث الاجتماعي والإعفاءات الخاصة بالأخوة والمتفوقين.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    
+</div>
+
+    <footer id="contact">
+        <div class="footer-logo">دليل <span>الطالب</span></div>
+        <p>مبادرة طلابية غير رسمية لمساعدة الزملاء في حل مشاكل القبول والتسجيل وتسهيل الحياة الجامعية.</p>
+        <div class="social-links">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="copyright">© 2026 دليل الطالب الجامعي. جميع الحقوق محفوظة.</div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>    
+    <script src="myjs.js"></script>
+</body>
+</html>
